@@ -15,6 +15,7 @@ public class ClaseProgramaPrincipal {
 		Triangulo trianguloClase = new Triangulo();
 		trianguloClase.base = 2f;
 		trianguloClase.altura = 10f;
+		System.out.println(trianguloClase.toString());
 		System.out.println("El area del triangulo clase " + trianguloClase.area());
 	}
 
