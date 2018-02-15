@@ -1,8 +1,25 @@
 package com.incyde;
 
 public class ClaseProgramaPrincipal {
-	
+
 	public static void main(String[] args) {
+		Triangulo[] triangulos;
+		triangulos = new Triangulo[3];
+		triangulos[0] = new Triangulo();
+		triangulos[1] = new Triangulo();
+		triangulos[2]  = new Triangulo();
+		triangulos[2].base = 5;
+
+		triangulos[0].color = "Blanco";
+		triangulos[1].color = "Rojo";
+		triangulos[2].color = "Amarillo";
+
+		triangulos[0].dibujar();
+		triangulos[1].dibujar();
+		triangulos[2].dibujar();
+	}
+	
+	public static void mainBasico() {
 		Triangulo trianguloAngela = new Triangulo();		
 		float[] tempLongitudes = {2, 3, 5};
 		trianguloAngela.longitudes = tempLongitudes;
