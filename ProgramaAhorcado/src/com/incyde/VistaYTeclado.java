@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class VistaYTeclado {
 	
-	Scanner teclado = new Scanner(System.in);
+	static Scanner teclado = new Scanner(System.in);
 	
 	public static String pedirLetra() {
 		System.out.println("Introduzca una letra");
-		return "t";
+		String letraLeida = teclado.nextLine();
+		return letraLeida.toLowerCase().trim();
 	}
 }
