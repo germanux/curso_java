@@ -3,6 +3,20 @@ package com.incyde;
 public class ClaseProgramaPrincipal {
 
 	public static void main(String[] args) {
+		Cuadrado miCuadrado_A= new Cuadrado(10);
+		miCuadrado_A.altura = 3;
+		Cuadrado miCuadrado_B= new Cuadrado(5);
+		miCuadrado_B.color = "Rojo";
+		Cuadrado miCuadrado_C= new Cuadrado( 5, "azul");
+		// miCuadrado.lado = 5;
+		System.out.println("Area de A: " + miCuadrado_A.area());
+		System.out.println("Color: " + miCuadrado_A.color);
+		main_array();
+	}
+	
+	
+	
+	public static void main_array() {
 		Triangulo[] triangulos;
 		triangulos = new Triangulo[3];
 		triangulos[0] = new Triangulo();
@@ -16,9 +30,9 @@ public class ClaseProgramaPrincipal {
 
 		triangulos[0].dibujar();
 		triangulos[1].dibujar();
-		triangulos[2].dibujar();
+		triangulos[2].dibujar();		
 	}
-	
+
 	public static void mainBasico() {
 		Triangulo trianguloAngela = new Triangulo();		
 		float[] tempLongitudes = {2, 3, 5};
