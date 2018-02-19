@@ -2,11 +2,6 @@ package com.incyde;
 
 public class Cuadrado extends Rectangulo {
 	
-	/*public Cuadrado() {
-		this.altura = 1.0f;
-		this.base = altura;
-		this.color = "transparente";
-	}*/
 	public Cuadrado(float lado) {
 		this.altura = lado;
 		this.base = altura;

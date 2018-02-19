@@ -7,8 +7,7 @@ public class ClaseProgramaPrincipal {
 		miCuadrado_A.altura = 3;
 		Cuadrado miCuadrado_B= new Cuadrado(5);
 		miCuadrado_B.color = "Rojo";
-		Cuadrado miCuadrado_C= new Cuadrado( 5, "azul");
-		// miCuadrado.lado = 5;
+
 		System.out.println("Area de A: " + miCuadrado_A.area());
 		System.out.println("Color: " + miCuadrado_A.color);
 		main_array();
