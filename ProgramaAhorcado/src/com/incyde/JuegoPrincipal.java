@@ -7,6 +7,7 @@ public class JuegoPrincipal {
 	static String guiones = "";
 	static String nuevosGuiones = "";
 	static String nuevosGuionesAnterior = "";
+	static ListaFalladas listaFalladas;
 	static int longitudPalabra;
 	static int contadorFallos = 0;
 
@@ -22,6 +23,7 @@ public class JuegoPrincipal {
 		return guiones;
 	}
 	public static void main(String[] args) {
+		listaFalladas = new ListaFalladas();
 		palabraElegida = ListaPalabras.palabraAleatoria();
 		longitudPalabra = palabraElegida.length();	
 		// System.out.println("La palabra es " + ListaPalabras.palabraAleatoria());
@@ -30,6 +32,7 @@ public class JuegoPrincipal {
 		 System.out.println("Palabra: " + guiones);
 		 nuevosGuiones = guiones;
 		while(nuevosGuiones.contains("-") && contadorFallos <= 6 ) {
+			listaFalladas.mostrarLista();
 			letra = VistaYTeclado.pedirLetra();
 			System.out.println("La letra es " + letra);
 			// guiones = "----------------------".substring(0, longitudPalabra); 
@@ -38,6 +41,7 @@ public class JuegoPrincipal {
 			} else {
 				contadorFallos = contadorFallos + 1;  // contadorFallos++;
 				System.out.println("Has fallado " + contadorFallos + " veces" );				
+				listaFalladas.agregarLetra(letra);				
 			}
 		}	
 		if (contadorFallos >= 6) {
