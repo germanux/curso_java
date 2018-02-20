@@ -7,13 +7,27 @@ public class ClaseProgramaPrincipal {
 		miCuadrado_A.altura = 3;
 		Cuadrado miCuadrado_B= new Cuadrado(5);
 		miCuadrado_B.color = "Rojo";
+		
+		//System.out.println("Area de A: " + miCuadrado_A.area());
+		//System.out.println("Color: " + miCuadrado_A.color);
+		
+		Triangulo miTri_A = new Triangulo(2, 10);
+		//System.out.println("Area riangulo: " + miRec_A.area());
 
-		System.out.println("Area de A: " + miCuadrado_A.area());
-		System.out.println("Color: " + miCuadrado_A.color);
-		main_array();
+		miCuadrado_A.dibujar("DIBUJANDO!! ");
+		miCuadrado_B.dibujar("PINTANDO: ");
+		miTri_A.dibujar("MOSTRANDO");
+		
+		Rectangulo miRec = new Rectangulo(10, 5);
+		Rectangulo otroRec =  miRec;
+		miRec.color = "TURQUESA";
+		otroRec.color = "GRIS";
+		miRec.dibujar();
+		otroRec.dibujar();
+		
+		ClaseTemporal objTemp = new ClaseTemporal();
+		System.out.println(objTemp);
 	}
-	
-	
 	
 	public static void main_array() {
 		Triangulo[] triangulos;

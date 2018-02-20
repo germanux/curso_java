@@ -1,16 +1,12 @@
 package com.incyde;
 
 public class Cuadrado extends Rectangulo {
-	
+
 	public Cuadrado(float lado) {
-		this.altura = lado;
-		this.base = altura;
-		this.color = "transparente";
+		super(lado,  lado);
 	}
 	public Cuadrado(float lado, String color) {
-		this.altura = lado;
-		this.base = altura;
-		this.color = color;
+		super(lado, lado, color);
 	} 
 	public String toString() {
 		return "Cuadrado " + base + " - Color: " + color ;
