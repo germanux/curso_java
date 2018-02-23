@@ -17,30 +17,37 @@ public class CalculadoraActivity extends AppCompatActivity {
         public void onClick(View viewBoton) {
 
             Button botonPulsado = (Button) viewBoton;
-            double numero_1 = Double.parseDouble(textoNumero1.getText().toString());
-            double numero_2 = Double.parseDouble(textoNumero2.getText().toString());
             double resultado;
+            if (textoNumero1.getText().toString().equals("")
+                    || textoNumero2.getText().toString().equals(""))
+            {
+                resultado = 0;
+            } else {
+                double numero_1 = Double.parseDouble(textoNumero1.getText().toString());
+                double numero_2 = Double.parseDouble(textoNumero2.getText().toString());
 
-            switch (botonPulsado.getId()) {
-                case R.id.botonSumar:
-                    resultado = numero_1 + numero_2;
-                    break;
-                case R.id.botonRestar:
-                    resultado = numero_1 - numero_2;
-                    break;
-                case R.id.botonMult:
-                    resultado = numero_1 * numero_2;
-                    break;
-                case R.id.botonDiv:
-                    resultado = numero_1 / numero_2;
-                    break;
-                case  R.id.botonIgual:
-                    textoNumero1.setText(R.string.cero);
-                    textoNumero2.setText(R.string.cero);
-                    resultado = 0;
-                default:
-                    resultado = 0;
-                    break;
+
+                switch (botonPulsado.getId()) {
+                    case R.id.botonSumar:
+                        resultado = numero_1 + numero_2;
+                        break;
+                    case R.id.botonRestar:
+                        resultado = numero_1 - numero_2;
+                        break;
+                    case R.id.botonMult:
+                        resultado = numero_1 * numero_2;
+                        break;
+                    case R.id.botonDiv:
+                        resultado = numero_1 / numero_2;
+                        break;
+                    case R.id.botonIgual:
+                        textoNumero1.setText(R.string.cero);
+                        textoNumero2.setText(R.string.cero);
+                        resultado = 0;
+                    default:
+                        resultado = 0;
+                        break;
+                }
             }
             textoResultado.setText(String.valueOf(resultado));
         }
