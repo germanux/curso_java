@@ -1,0 +1,13 @@
+2 cantidades
+Calculos numeros (un botón por cálculo):
+	Suma 
+	Resta 
+	Multiplicacion
+	Division
+Caja de texto para mostrar
+Botón para introducir cada uno de los números
+Botón para borrar todo
+Botón para borrar una cifra
+Botón para mostrar el resultado
+- Calculos acumulativos
+- Numeros ilimitados, por ejemplo, con double. 
